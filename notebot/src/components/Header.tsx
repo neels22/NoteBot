@@ -3,9 +3,10 @@ import Link from "next/link";
 import { Button } from "./ui/button";
 import DarkModeToggle from "./DarkmodeToggle";
 import LogoutButton from "./LogoutButton";
+import { getUser } from "@/auth/server";
 
-const Header = () => {
-    const user = 1;
+const Header = async () => {
+    const user = await getUser();
   return (
     <header className="relative flex h-24 w-full items-center justify-between bg-popover px-3 sm:px-8">
       <Link href="/" className="flex items-end gap-2">

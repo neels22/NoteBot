@@ -29,7 +29,7 @@ export async function createClient() {
 
 
 export async function getUser() {
-    const {auth} = await createClient;
+    const {auth} = await createClient();
 
     const userObject = await auth.getUser();
 
