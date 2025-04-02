@@ -14,7 +14,7 @@ const LogoutButton = () => {
   const handlelogout = async () => {
     setloading(true);
 
-    const {errormessage}  = await LogoutAction()
+    const errormessage  = await LogoutAction()
 
     if (!errormessage) {
       toast.success("Logout successful");
