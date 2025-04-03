@@ -6,6 +6,7 @@ import { Toaster } from "@/components/ui/sonner";
 import Header from "@/components/Header";
 import { SidebarProvider } from "@/components/ui/sidebar";
 import { AppSidebar } from "@/components/AppSidebar";
+import NoteProvider from "@/providers/NoteProvider";
 
 export const metadata: Metadata = {
   title: "NoteBot",
@@ -26,6 +27,8 @@ export default function RootLayout({
             enableSystem
             disableTransitionOnChange
           >
+            <NoteProvider>
+
             <SidebarProvider>
             <AppSidebar />
 
@@ -40,6 +43,7 @@ export default function RootLayout({
 
             </div>
             </SidebarProvider>
+            </NoteProvider>
             <Toaster richColors/>
           </ThemeProvider>
       </body>
