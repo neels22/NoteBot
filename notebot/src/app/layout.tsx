@@ -4,6 +4,8 @@ import { ThemeProvider } from "@/providers/ThemeProviders"
 import "@/styles/globals.css";
 import { Toaster } from "@/components/ui/sonner";
 import Header from "@/components/Header";
+import { SidebarProvider } from "@/components/ui/sidebar";
+import { AppSidebar } from "@/components/AppSidebar";
 
 export const metadata: Metadata = {
   title: "NoteBot",
@@ -24,6 +26,9 @@ export default function RootLayout({
             enableSystem
             disableTransitionOnChange
           >
+            <SidebarProvider>
+            <AppSidebar />
+
             <div className="flex min-h-screen w-full flex-col">
 
                 <Header/>
@@ -34,6 +39,7 @@ export default function RootLayout({
                </main>
 
             </div>
+            </SidebarProvider>
             <Toaster richColors/>
           </ThemeProvider>
       </body>
