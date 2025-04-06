@@ -53,9 +53,11 @@ export const deleteNoteAction = async (noteId: string) => {
 
     return { errorMessage: null };
   } catch (error) {
-    return handleError(error);
+    const message = error instanceof Error ? error.message : "An unknown error occurred";
+    return { errorMessage: message };
   }
 };
+
 
 export const askAIAboutNotesAction = async (
   newQuestions: string[],
