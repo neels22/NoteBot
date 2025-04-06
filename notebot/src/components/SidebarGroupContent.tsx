@@ -11,7 +11,9 @@ import { Input } from "./ui/input";
 import { useEffect, useMemo, useState } from "react";
 import Fuse from "fuse.js";
 import SelectNoteButton from "./SelectNoteButton";
-import DeleteNoteButton from "./DeleteNoteButton"
+import DeleteNoteButton from "./DeleteNoteButton";
+
+
 
 type Props = {
   notes: Note[];
